@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <header>
+    <h1>SPLI</h1>
+    <h1>TTER</h1>
+  </header>
+
+  <main>
+    <form novalidate>
+
+      <label for="bill">Bill</label>
+      <input type="text" name="bill">
+      
+      <label for="tip">Select Tip %</label>
+      <div class="form-group">
+        <input type="text" name="tip" placeholder="5%">
+        <input type="text" name="tip" placeholder="10%">
+        <input type="text" name="tip" placeholder="15%">
+        <input type="text" name="tip" placeholder="25%">
+        <input type="text" name="tip" placeholder="50%">
+        <input type="text" name="tip" placeholder="Custom">
+      </div>
+      
+      <label for="people"> Number of People</label>
+      <input type="text" name="people">
+    </form>
+
+    <section class="summary">
+      <div class="tip__amount">
+        <p>Tip Amount</p>
+        <p id="tipAmount"></p>
+      </div>
+      <div class="total">
+        <p>Total</p>
+        <p id="total"></p>
+      </div>
+
+    </section>
+    
+  </main>
+
+
+
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
+</body>
+</html>

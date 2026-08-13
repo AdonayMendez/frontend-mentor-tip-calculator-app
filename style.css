@@ -1,0 +1,91 @@
+/* space-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/space-mono-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/space-mono-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root{
+  --green900: hsl(183, 100%, 15%);
+  --grey500: hsl(186, 14%, 43%); 
+  --grey400: hsl(184, 14%, 56%); 
+  --grey200: hsl(185, 41%, 84%); 
+  --grey50: hsl(189, 47%, 97%); 
+  --white: hsl(0, 100%, 100%); 
+}
+
+*,
+*::before, 
+*::after{
+  box-sizing: border-box; 
+  /* margin: 0; 
+  padding: 0;  */
+}
+
+body{
+  background-color: var(--grey200);
+  font-family: "Space Mono", sans-serif;
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+
+  min-height: 100vh; 
+}
+
+main{
+  background-color: var(--white); 
+  width: 100%; 
+  border-top-left-radius: 1rem; 
+  border-top-right-radius: 1rem; 
+  padding: .5rem;
+}
+
+.form-group{
+  display: grid; 
+  grid-template-columns: repeat(3, auto); 
+  grid-template-rows: repeat(2, auto); 
+  gap: 1rem; 
+
+  input{
+    background-color: var(--green900);
+    border: none;
+    padding: .5rem;
+    border-radius: .2rem;
+    cursor: pointer;  
+  }
+
+  input::placeholder{
+    color: var(--white);
+    text-align: center;
+  }
+
+  input:last-child{
+    background-color: var(--grey50);
+  }
+
+  input:last-child::placeholder{
+    color: var(--grey500);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  input:last-child:focus::placeholder{
+    color: transparent; 
+  }
+}
+
+input{
+  width: 100%; 
+}
