@@ -19,12 +19,15 @@
 
   <main>
     <form novalidate>
-
+      
       <label for="bill">Bill</label>
+      <div class="bill-input_container">
+      <img src="images/icon-dollar.svg">
       <input type="number" name="bill" id="bill">
+      </div>
       
       <label for="tip">Select Tip %</label>
-      <div class="tip-buttons">
+      <div class="tip-buttons_container">
         <button type="submit" data-tip="5">5%</button>
         <button type="submit" data-tip="10">10%</button>
         <button type="submit" data-tip="15">15%</button>
@@ -34,16 +37,25 @@
       </div>
       
       <label for="people"> Number of People?</label>
-      <input type="number" name="people" id="people">
+      <div class="peopleInput_container">
+       <img src="images/icon-person.svg">
+       <input type="number" name="people" id="people" class="">
+      </div>
     </form>
 
     <section class="summary">
       <div class="tip__amount">
-        <p>Tip Amount / person</p>
+        <div>
+        <p>Tip Amount</p>
+        <span>/ person</span>
+        </div>
         <p id="tipAmount"></p>
       </div>
       <div class="total">
-        <p>Total / person</p>
+        <div>
+        <p>Total</p>
+        <span> / person</span>
+        </div>
         <p id="total"></p>
       </div>
 

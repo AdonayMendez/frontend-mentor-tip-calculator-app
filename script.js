@@ -30,7 +30,7 @@ function calculateTip() {
 
   console.log(amountPerPerson); 
   tipAmount.textContent = `$${Math.floor(tipPerPerson)}`;
-  total.textContent = `${amountPerPerson}`; 
+  total.textContent = `$${amountPerPerson}`; 
 }
 
 bill.addEventListener("input", () => {
