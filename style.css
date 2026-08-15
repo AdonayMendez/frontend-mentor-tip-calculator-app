@@ -52,36 +52,36 @@ main{
   padding: .5rem;
 }
 
-.form-group{
+.tip-buttons{
   display: grid; 
   grid-template-columns: repeat(3, auto); 
   grid-template-rows: repeat(2, auto); 
   gap: 1rem; 
 
-  input{
+  button{
     background-color: var(--green900);
     border: none;
     padding: .5rem;
     border-radius: .2rem;
     cursor: pointer;  
+
+    color: var(--white);
+  }
+
+  input{
+    background-color: var(--grey50);
+    border: none;
+    cursor: pointer; 
   }
 
   input::placeholder{
-    color: var(--white);
-    text-align: center;
-  }
-
-  input:last-child{
-    background-color: var(--grey50);
-  }
-
-  input:last-child::placeholder{
     color: var(--grey500);
     font-size: 1rem;
     font-weight: bold;
+    text-align: center; 
   }
 
-  input:last-child:focus::placeholder{
+  input:focus::placeholder{
     color: transparent; 
   }
 }

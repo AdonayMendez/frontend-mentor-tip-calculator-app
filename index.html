@@ -21,31 +21,33 @@
     <form novalidate>
 
       <label for="bill">Bill</label>
-      <input type="text" name="bill">
+      <input type="number" name="bill" id="bill">
       
       <label for="tip">Select Tip %</label>
-      <div class="form-group">
-        <input type="text" name="tip" placeholder="5%">
-        <input type="text" name="tip" placeholder="10%">
-        <input type="text" name="tip" placeholder="15%">
-        <input type="text" name="tip" placeholder="25%">
-        <input type="text" name="tip" placeholder="50%">
-        <input type="text" name="tip" placeholder="Custom">
+      <div class="tip-buttons">
+        <button type="submit" data-tip="5">5%</button>
+        <button type="submit" data-tip="10">10%</button>
+        <button type="submit" data-tip="15">15%</button>
+        <button type="submit" data-tip="25">25%</button>
+        <button type="submit" data-tip="50">50%</button>
+        <input type="number" name="tip" id="customAmount" placeholder="Custom">
       </div>
       
-      <label for="people"> Number of People</label>
-      <input type="text" name="people">
+      <label for="people"> Number of People?</label>
+      <input type="number" name="people" id="people">
     </form>
 
     <section class="summary">
       <div class="tip__amount">
-        <p>Tip Amount</p>
+        <p>Tip Amount / person</p>
         <p id="tipAmount"></p>
       </div>
       <div class="total">
-        <p>Total</p>
+        <p>Total / person</p>
         <p id="total"></p>
       </div>
+
+      <button id="resetBtn">Reset</button>
 
     </section>
     
