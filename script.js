@@ -30,8 +30,8 @@ function calculateTip() {
   }
 
   console.log(amountPerPerson); 
-  tipAmount.textContent = `${tipPerPerson}`;
-  total.textContent = `$${amountPerPerson}`; 
+  tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
+  total.textContent = `$${amountPerPerson.toFixed(2)}`; 
 }
 
 bill.addEventListener("input", () => {
@@ -62,14 +62,17 @@ people.addEventListener("input", (e) => {
 
   if(value.trim() === ""){
     peopleInputError.classList.remove("show");
+    people.classList.remove("error");
     return; 
   } 
 
   if(peopleAmount === 0) {
-    peopleInputError.classList.add("show"); 
+    peopleInputError.classList.add("show");
+    people.classList.add("error");  
     return; 
   } else {
     peopleInputError.classList.remove("show");
+    people.classList.remove("error");
   }
 
   calculateTip(); 
