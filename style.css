@@ -18,11 +18,15 @@
 
 :root{
   --green900: hsl(183, 100%, 15%);
+  --green400: hsl(172, 67%, 45%);
   --grey500: hsl(186, 14%, 43%); 
   --grey400: hsl(184, 14%, 56%); 
   --grey200: hsl(185, 41%, 84%); 
   --grey50: hsl(189, 47%, 97%); 
   --white: hsl(0, 100%, 100%); 
+
+  --lightblue: rgb(191, 227, 255);
+  --darkgreen: rgba(56, 102, 108);
 }
 
 *,
@@ -156,14 +160,14 @@ button{
     font-size: 1.4rem;
   }
 
-  button:focus, button:active{
-    background-color: var(--grey200);
+  button:focus, button:active, button:hover{
+    background-color: var(--lightblue);
     color: var(--green900);
   }
 
   input::placeholder{
     color: var(--grey500);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center; 
   }
@@ -215,19 +219,24 @@ button{
 }
 
 #tipAmount, #total{
-  color: var(--grey200);
+  color: var(--green400);
   font-size: 2.5rem;
 }
 
 #resetBtn{
-  background-color: var(--grey400);
+  background-color: var(--darkgreen);
+  color: var(--grey500);
   padding: .8rem 0rem;
   border-radius: .3rem;
   font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
 }
 
 #resetBtn:hover{
-  background-color: var(--grey200);
+  background-color: var(--lightblue);
+  color: var(--green900);
 }
 
 
@@ -241,11 +250,23 @@ button{
   }
 
   main{
-    width: 65rem;
+    width: 60rem;
+    height: 28rem;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto; 
     gap: 1rem;
+
+    border-radius: 1rem;
+  }
+
+  form{
+    justify-content: space-between;
+  }
+
+  .tip-buttons_container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .summary{
